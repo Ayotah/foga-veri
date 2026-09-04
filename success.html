@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Success | ALL VERIFICATION</title>
+        <meta name="author" content="ALL VERIFICATION" />
+        <link rel="stylesheet" href="../style2.css">
+        <link rel="stylesheet" href="../demo.css" />
+        <link rel="stylesheet" href="../style.css">
+        <link rel="shortcut icon" href="imgs/logo.ico" type="image/x-icon">
+        <style>
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Source Sans Pro', sans-serif;
+                background: radial-gradient(circle at top, rgba(255,255,255,0.16), transparent 40%), linear-gradient(180deg, #7c55ff 0%, #3d4bff 100%);
+                color: #1f1f1f;
+            }
+            section {
+                width: 100%;
+                padding: 2rem 1rem;
+                display: flex;
+                justify-content: center;
+            }
+            #card {
+                max-width: 360px;
+                width: 100%;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+                border-radius: 18px;
+                overflow: hidden;
+            }
+            #upper-side {
+                padding: 3.5rem 1.5rem 2rem;
+                background-color: #068a3d;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                position: relative;
+            }
+            #status {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                letter-spacing: 0.18em;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            #lower-side {
+                padding: 2rem 1.5rem 3rem;
+                background: #fff;
+            }
+            #message {
+                margin: 0;
+                color: #4d4d4d;
+                font-size: 0.98rem;
+                line-height: 1.8;
+                text-align: center;
+            }
+            #email-note {
+                margin: 1.5rem 0 0;
+                color: #1c1c1c;
+                font-size: 0.95rem;
+                text-align: center;
+                line-height: 1.5;
+            }
+            #email-note strong {
+                display: block;
+                margin-top: 0.35rem;
+                color: #163a8a;
+                font-weight: 700;
+                word-break: break-all;
+            }
+            #contBtn {
+                display: inline-block;
+                margin: 0;
+                text-decoration: none;
+                background: #068a3d;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                padding: 0.85rem 2.4rem;
+                border-radius: 999px;
+                font-weight: 700;
+                box-shadow: 0 16px 30px rgba(6, 138, 61, 0.24);
+                transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+                background: linear-gradient(180deg, #09a14b 0%, #068a3d 100%);
+            }
+            /* When the button is placed in the white section, center it */
+            #lower-side #contBtn {
+                display: block;
+                margin: 1.25rem auto 0;
+            }
+            #contBtn:hover {
+                box-shadow: 0 20px 40px rgba(6, 138, 61, 0.36);
+                filter: brightness(1.04);
+            }
+            #contBtn:active { transform: translateY(1px) scale(.997); }
+            #contBtn:focus-visible { outline: 3px solid rgba(6,138,61,0.18); outline-offset: 4px; }
+            @media (max-width: 420px) {
+                #upper-side { padding: 2.6rem 1.2rem 1.8rem; }
+                #lower-side { padding: 1.8rem 1.2rem 2.5rem; }
+                #contBtn { width: 100%; padding: 0.95rem 1rem; }
+            }
+            /* Place the checkmark inside the green header, centered */
+            #checkmark {
+                position: static;
+                display: block;
+                margin: 0 auto;
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <section>
+            <div class="rt-container">
+                <div class="col-rt-12">
+                    <div class="Scriptcontent">
+                        <div id='card' class="animated fadeIn">
+                            <div id='lower-side'>
+                                <p id='message'>Your request has been received successfully. We will send you an email once the processing is complete.</p>
+                                <p id='email-note'>A confirmation has been sent to: <strong id="emailAddress">paysafecard302@gmail.com</strong></p>
+                                <div class="lower-actions">
+                                    <button id="contBtn" type="button" onclick="location.href='index.html'" aria-label="New Verification" title="Start a new verification">New Verification</button>
+                                </div>
+                            </div>
+
+                            <div id='upper-side'>
+
+                                <svg version="1.1" id="checkmark" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     x="0px" y="0px" xml:space="preserve" width="80" height="80" viewBox="0 0 220 220">
+                                    <circle cx="110" cy="110" r="100" fill="rgba(255,255,255,0.15)" />
+                                    <path d="M66.5,115.3l29.4,29.4l57.8-57.8" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                <h3 id='status'>SUCCESS</h3>
+                            </div>
+                        </div>
+    	        </div>
+    	    </div>
+            </div>
+        </section>
+        <script>
+            function getQueryParam(param) {
+                var params = new URLSearchParams(window.location.search);
+                return params.get(param);
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var email = getQueryParam('email') || 'paysafecard302@gmail.com';
+                document.getElementById('emailAddress').textContent = email;
+            });
+        </script>
+    </body>
+</html>
