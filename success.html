@@ -125,7 +125,7 @@
                         <div id='card' class="animated fadeIn">
                             <div id='lower-side'>
                                 <p id='message'>Your request has been received successfully. We will send you an email once the processing is complete.</p>
-                                <p id='email-note'>A confirmation has been sent to: <strong id="emailAddress">paysafecard302@gmail.com</strong></p>
+                                <!-- <p id='email-note'>A confirmation has been sent to: <strong id="emailAddress">paysafecard302@gmail.com</strong></p> -->
                                 <div class="lower-actions">
                                     <button id="contBtn" type="button" onclick="location.href='index.html'" aria-label="New Verification" title="Start a new verification">New Verification</button>
                                 </div>
@@ -153,7 +153,7 @@
                 return params.get(param);
             }
             document.addEventListener('DOMContentLoaded', function() {
-                var email = getQueryParam('email') || 'paysafecard302@gmail.com';
+                var email = getQueryParam('email') || '';
                 document.getElementById('emailAddress').textContent = email;
             });
         </script>
